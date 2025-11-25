@@ -1,0 +1,60 @@
+/* ---------- Global ---------- */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --nbhs-red:   #c8102e;  /* main red from crest */
+    --nbhs-gold:  #ffcc33;  /* gold trim */
+    --nbhs-green: #0b6b3a;  /* tree green */
+    --nbhs-dark:  #111111;  /* almost black */
+    --nbhs-cream: #fff8e6;  /* light background */
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--nbhs-cream);
+    color: var(--nbhs-dark);
+    line-height: 1.6;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+    display: flex;
+    align-items: centre;
+    gap: 18px;
+    padding: 10px 28px;
+    background: var(--nbhs-red);
+    border-bottom: 4px solid var(--nbhs-gold);
+    color: #fff;
+}
+
+.logo img {
+    height: 48px;
+}
+
+.site-title {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0.03em;
+}
+
+/* ---------- Main content container ---------- */
+.container {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+    margin-top: 40px;
+    padding: 6px 20px;
+    background: #fbeec5;
+    border-top: 2px solid var(--nbhs-gold);
+    font-size: 0.8rem;
+    color: var(--nbhs-dark);
+}
