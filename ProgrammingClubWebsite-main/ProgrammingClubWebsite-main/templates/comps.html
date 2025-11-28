@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Competition | NBHS Programming Club{% endblock %}
+{% block content %}
+<section class="comp-body">
+    <h2 class="comp-main-title">Generic Programming<br>Competition</h2>
+    <p class="comp-desc">
+        A competition that challenges Year 7–12 students to think critically.
+        Oh wait, this sample is already out. Okay, now time to tell you about the details.
+    </p>
+    <p class="comp-details">
+        <strong>Date:</strong> 30/10/2025<br>
+        <strong>Time:</strong> 09:25 AM<br>
+        <strong>Supervising Teachers:</strong> Mr Wang, Mr Shirlaw
+    </p>
+    <p class="comp-register">
+        Want to register?
+        <a href="{{ url_for('registration') }}">Registration</a>
+    </p>
+</section>
+{% endblock %}
+

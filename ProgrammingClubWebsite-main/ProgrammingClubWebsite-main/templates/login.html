@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Login | NBHS Programming Club{% endblock %}
+{% block content %}
+<section class="form-card">
+    <h2>Login</h2>
+    <form action="placeholder" method="post" class="login-form">
+        <div class="form-grid login-grid">
+            <div class="form-field">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-field">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+        </div>
+        <div class="form-actions">
+            <a href="{{ url_for('signup') }}" class="form-link">Don't have an account?</a>
+            <button type="submit" class="btn-primary">Login</button>
+        </div>
+    </form>
+</section>
+{% endblock %}

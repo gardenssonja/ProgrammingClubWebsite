@@ -22,12 +22,19 @@ body {
 /* ---------- Navbar ---------- */
 .navbar {
     display: flex;
-    align-items: centre;
-    gap: 18px;
-    padding: 10px 28px;
+    justify-content: space-between;  /* left vs right */
+    align-items: center;             /* vertical centring */
+    padding: 12px 28px;
     background: var(--nbhs-red);
     border-bottom: 4px solid var(--nbhs-gold);
-    color: #fff;
+    color: #ffffff;
+}
+
+/* logo + title group */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
 }
 
 .logo img {
@@ -38,26 +45,213 @@ body {
     margin: 0;
     font-size: 1.8rem;
     font-weight: 700;
-    color: white;
+    color: #ffffff;
     letter-spacing: 0.03em;
 }
 
-.navigators {
+/* links on the right */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 24px;
     margin: 0;
-    margin-top: 5px;
-    margin-left: 100px;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: white;
-    letter-spacing: 0.03em;
-    text-decoration: none;
+    padding: 0;
 }
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--nbhs-gold);
+    text-decoration: underline;
+}
+
 
 /* ---------- Main content container ---------- */
 .container {
     max-width: 960px;
     margin: 40px auto;
     padding: 0 20px;
+}
+
+/* ---------- Home content container ---------- */
+.week-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.week-card {
+    flex: 1 1 150px;
+    padding: 12px;
+    text-align: centre;
+    border: 2px solid var(--nbhs-gold);
+    border-radius: 6px;
+    background: #fff;
+    color: var(--nbhs-red);
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.week-card:hover {
+    background: var(--nbhs-red);
+    color: #fff;
+    border-color: var(--nbhs-gold);
+}
+
+/* ---------- Form Card ---------- */
+.form-card {
+    max-width: 800px;             
+    margin: 40px auto;
+    padding: 24px 28px 28px;
+    background: #fff;
+    border: 2px solid var(--nbhs-gold);
+    border-radius: 10px;
+}
+
+.form-card h2 {
+    margin: 0 0 24px;
+    font-size: 2.2rem;
+    color: var(--nbhs-red);
+}
+
+/* ---------- Grid Layout ---------- */
+.signup-form .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* 2 tidy columns */
+    column-gap: 32px;
+    row-gap: 18px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .signup-form .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .signup-form .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form-field label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.form-field input {
+    width: 100%;
+    padding: 6px 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* ---------- Actions ---------- */
+.form-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+}
+
+.form-link {
+    font-size: 0.95rem;
+}
+
+/* ---------- Login Form Grid ---------- */
+.login-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    column-gap: 32px;
+    row-gap: 18px;
+    max-width: 600px;
+}
+
+/* Mobile-friendly */
+@media (max-width: 700px) {
+    .login-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ---------- Button ---------- */
+.btn-primary {
+    padding: 6px 16px;
+    background: var(--nbhs-red);
+    border: 1px solid var(--nbhs-gold);
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-primary:hover {
+    background: var(--nbhs-gold);
+    color: #000;
+}
+
+/* ---------- Competitions Page ---------- */
+
+.comp-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 32px;
+}
+
+.comp-logo {
+    height: 120px;
+}
+
+.comp-heading {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.comp-body {
+    margin-top: 10px;
+}
+
+.comp-main-title {
+    font-size: 2.6rem;
+    font-weight: 800;
+    margin: 0 0 20px;
+}
+
+.comp-desc {
+    font-size: 1.1rem;
+    max-width: 900px;
+    margin: 0 0 28px;
+}
+
+.comp-details {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin: 0 0 28px;
+}
+
+.comp-register {
+    font-size: 1.1rem;
+}
+
+.comp-register a {
+    text-decoration: underline;
+    color: var(--nbhs-dark);
+}
+
+.comp-register a:hover {
+    color: var(--nbhs-red);
 }
 
 /* ---------- Footer ---------- */
@@ -69,4 +263,3 @@ body {
     font-size: 0.8rem;
     color: var(--nbhs-dark);
 }
-
